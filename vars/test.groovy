@@ -5,4 +5,3 @@ print "abc = ${abc}"
 print "xyz = ${xyz}"
 
 print abc
-
