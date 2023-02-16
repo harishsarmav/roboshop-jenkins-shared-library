@@ -12,7 +12,7 @@ def unittests() {
     if (app_lang == "nodejs") {
         // Developer has missed unit test cases in our project, He need to add them for best practices, We are skipping to proceed further
         sh 'npm install'
-    } catch(Exception e) {
+    }   catch(Exception e) {
         email("Unit tests failed")
     }
 
