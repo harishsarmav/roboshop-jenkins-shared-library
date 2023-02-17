@@ -33,8 +33,8 @@ def call() {
             script {
 //              wrap([$class: 'maskPasswords', varPasswordPairs: [[password: "${SONAR_PASS}", var: "${SONAR_USER}"]]]) {
               maskPasswords(varPasswordPairs: [[password: "${SONAR_PASS}", var: "${SONAR_USER}"]]) {
-              println Password = "${SONAR_PASS}"
-                sh 'sonar-scanner -Dsonar.host.url=http://172.31.9.225:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectKey=cart'
+              println "${SONAR_PASS}"
+                sh "sonar-scanner -Dsonar.host.url=http://172.31.9.225:9000 -Dsonar.login=${SONAR_USER} -Dsonar.password=${SONAR_PASS} -Dsonar.projectKey=cart"
               }
             }
           }
