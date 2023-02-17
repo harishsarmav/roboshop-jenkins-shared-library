@@ -5,7 +5,7 @@ def compile() {
     }
 
     if (app_lang == "maven") {
-        sh 'mvn clean compile'
+        sh 'mvn package'
     }
 }
 
@@ -14,6 +14,7 @@ def unittests() {
     if (app_lang == "nodejs") {
         // Developer has missed unit test cases in our project, He need to add them for best practices, We are skipping to proceed further
          sh 'npm test || true'
+        
     }
 
     if (app_lang == "maven") {
