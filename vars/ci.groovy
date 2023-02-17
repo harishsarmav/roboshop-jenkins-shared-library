@@ -36,7 +36,7 @@ def call() {
           }
         }
 //      }
-    
+
         stage('Upload code to Centralized Place') {
           steps {
             echo 'upload'
@@ -45,6 +45,7 @@ def call() {
 
 //      }
       }
+    }
   } catch(Exception e) {
     common.email("Failed")
   }
