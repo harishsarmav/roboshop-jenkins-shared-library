@@ -4,10 +4,8 @@ def call() {
 
       stage('Checkout') {
         cleanWs()
+        git branch: 'main', url: 'https://github.com/harishsarmav/cart'
       }
-
-      stage()
-
 
       stage('Compile/Build') {
         common.compile()
