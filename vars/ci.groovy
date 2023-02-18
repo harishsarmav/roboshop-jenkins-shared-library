@@ -6,6 +6,9 @@ def call() {
         cleanWs()
       }
 
+      stage()
+
+
       stage('Compile/Build') {
         common.compile()
       }
