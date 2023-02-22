@@ -1,10 +1,11 @@
 def call() {
+
   if (!env.SONAR_EXTRA_OPTS) {
     env.SONAR_EXTRA_OPTS = " "
   }
 
   if (!env.extraFiles) {
-    env.env.extraFiles = " "
+    env.extraFiles = " "
   }
 
   if (!env.TAG_NAME) {
