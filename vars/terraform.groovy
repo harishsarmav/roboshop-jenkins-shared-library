@@ -1,5 +1,10 @@
 def call() {
     pipeline {
+
+        options {
+            ansicolor('xterm')
+        }
+
         agent {
             node {
                 label 'workstation'
